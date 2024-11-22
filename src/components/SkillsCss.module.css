@@ -37,16 +37,7 @@
 .skills--section--card:hover .skills--section--description {
   color: var(--darkblue);
 }
-.skills--section--img {
-  display: flex;
-  padding: 13.3px;
-  justify-content: center;
-  align-items: center;
-  gap: 13.3px;
-  border-radius: 10.6px;
-  background: #fff;
-  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
-}
+
 .skills--section--card--content {
   display: flex;
   flex-direction: column;
@@ -129,4 +120,41 @@
   line-height: 32px;
   display: flex;
   align-items: flex-start;
+}
+
+.flex-icon {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  padding: 13.3px;
+  justify-content: center;
+  align-items: center;
+  gap: 13.3px;
+  border-radius: 10.6px;
+  background: #fff;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
+  margin-left: 9px;
+}
+
+.icon-language {
+  text-align: center;
+
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 720px) {
+  .flex-icon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .flex-icon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
