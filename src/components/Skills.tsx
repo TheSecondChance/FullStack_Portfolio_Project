@@ -4,10 +4,12 @@ import TechStackIcons from "./TechStackIcons";
 
 const Skills = () => {
   return (
-    <section className={SkillsCss["skills--section"]} id="MySkills">
+    <section className={SkillsCss["skills--section"]}>
       <div className={SkillsCss["portfolio--container"]}>
         <p className={SkillsCss["section--title"]}>Technical Expertise</p>
-        <h2 className={SkillsCss["skills--section--heading"]}>My Skills</h2>
+        <h2 className={SkillsCss["skills--section--heading"]} id="MySkills">
+          My Skills
+        </h2>
       </div>
       <div className={SkillsCss["skills--section--container"]}>
         {data?.skills?.map((item, index) => (
@@ -20,17 +22,17 @@ const Skills = () => {
                 {item.description}
               </p>
             </div>
-            <div className={SkillsCss["skills--section--img"]}>
-              <div className={SkillsCss["flex-icon"]}>
-                {Object.entries(item.icons ?? {}).map(([key, value]) => (
-                  <TechStackIcons
-                    iconLanguageCss={SkillsCss["icon-language"]}
-                    flexIconClass={SkillsCss["icon"]}
-                    iconLanguage={value}
-                    name={key}
-                  />
-                ))}
-              </div>
+
+            <div className={SkillsCss["flex-icon"]}>
+              {Object.entries(item.icons ?? {}).map(([key, value]) => (
+                <TechStackIcons
+                  icon={SkillsCss["icon"]}
+                  wrapper={SkillsCss["wrapper"]}
+                  tooltipText={SkillsCss["tooltip-text"]}
+                  iconLanguage={value}
+                  name={key}
+                />
+              ))}
             </div>
           </div>
         ))}

@@ -3,21 +3,23 @@ import StackIcon from "tech-stack-icons";
 type IconsProps = {
   iconLanguage: string;
   name: string;
-  flexIconClass: string;
-  iconLanguageCss: string;
+  wrapper: string;
+  tooltipText: string;
+  icon: string;
 };
 
 const TechStackIcons = ({
   iconLanguage,
   name,
-  flexIconClass,
-  iconLanguageCss,
+  wrapper,
+  tooltipText,
+  icon,
 }: IconsProps) => {
   return (
     <div>
-      <StackIcon name={name} style={{ width: 50 }} className={flexIconClass} />
-      <div className={iconLanguageCss}>
-        <p>{iconLanguage}</p>
+      <div className={wrapper}>
+        <StackIcon name={name} style={{ width: 30 }} className={icon} />
+        <p className={tooltipText}>{iconLanguage}</p>
       </div>
     </div>
   );
