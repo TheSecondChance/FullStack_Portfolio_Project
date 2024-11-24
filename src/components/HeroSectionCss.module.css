@@ -59,6 +59,11 @@
   align-items: flex-start;
 }
 
+.map {
+  display: inline;
+  margin-bottom: 10px;
+}
+
 @media only screen and (max-width: 1800px) {
   .hero--section--title {
     font-size: 68px;

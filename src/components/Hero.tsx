@@ -1,3 +1,4 @@
+import { FaMapMarkerAlt } from "react-icons/fa";
 import HeroSectionCss from "./HeroSectionCss.module.css";
 import logo from "../assets/img/hero_img.jpg";
 
@@ -14,13 +15,19 @@ const Hero = () => {
           <h1 className={HeroSectionCss["hero--section--title"]}>
             <span className={HeroSectionCss["hero--section-title--color"]}>
               Full Stack
-            </span>{" "}
+            </span>
             <br />
             Software Engineer
           </h1>
           <p className={HeroSectionCss["hero--section-description"]}>
-            Addis Ababa, Ethiopia Building Real Products <br /> For Real
-            Clients, Not Just More Projects
+            <FaMapMarkerAlt
+              color="#EA1B00"
+              size={18}
+              className={HeroSectionCss["map"]}
+            />{" "}
+            Addis Ababa, Ethiopia
+            <br /> Building Real Products For Real Clients, Not Just More
+            Projects
           </p>
         </div>
         <button className="btn btn-primary">Get Resume</button>
