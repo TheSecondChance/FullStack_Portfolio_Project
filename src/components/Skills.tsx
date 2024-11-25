@@ -4,12 +4,10 @@ import TechStackIcons from "./TechStackIcons";
 
 const Skills = () => {
   return (
-    <section className={SkillsCss["skills--section"]}>
+    <section className={SkillsCss["skills--section"]} id="MySkills">
       <div className={SkillsCss["portfolio--container"]}>
         <p className={SkillsCss["section--title"]}>Technical Expertise</p>
-        <h2 className={SkillsCss["skills--section--heading"]} id="MySkills">
-          My Skills
-        </h2>
+        <h2 className={SkillsCss["skills--section--heading"]}>My Skills</h2>
       </div>
       <div className={SkillsCss["skills--section--container"]}>
         {data?.skills?.map((item, index) => (
