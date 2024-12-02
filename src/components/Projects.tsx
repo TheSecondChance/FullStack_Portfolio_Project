@@ -1,6 +1,6 @@
 import data from "../data/index.json";
 import ProjectCss from "./ProjectsCss.module.css";
-import Image from "../assets/img/chrome.png";
+import { getImageURL } from "../utils/image-utils";
 
 const Projects = () => {
   return (
@@ -8,11 +8,12 @@ const Projects = () => {
       <div className={ProjectCss["portfolio--container-box"]}>
         <h2 className={ProjectCss["section--heading"]}>Projects</h2>
       </div>
+
       <div className={ProjectCss["portfolio--section--container"]}>
         {data?.project?.map((item, index) => (
           <div key={index} className={ProjectCss["portfolio--section--card"]}>
             <div className={ProjectCss["portfolio--section--img"]}>
-              <img src={Image} alt="Project-image" />
+              <img src={getImageURL(item.src)} alt="project-image" />
             </div>
             <div className={ProjectCss["portfolio--section--card--content"]}>
               <div>
