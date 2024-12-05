@@ -28,8 +28,8 @@ const Hero = () => {
               className={HeroSectionCss["map"]}
             />{" "}
             Addis Ababa, Ethiopia
-            <br /> Building Real Products For Real Clients, Not Just More
-            Projects
+            <br /> I like to develop full-stack web applications, write backend
+            logics & love to explore to make my hands dirty on the technologies!
           </p>
         </div>
         <div className={HeroSectionCss["links"]}>
