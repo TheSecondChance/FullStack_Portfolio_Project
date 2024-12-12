@@ -23,16 +23,22 @@ const Projects = () => {
                 <p className="text-md">{item.description}</p>
               </div>
               <div className={ProjectCss["links"]}>
-                <p
+                <a
+                  href={item.linkViewDemo}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`${ProjectCss["text-sm"]} ${ProjectCss["portfolio--link"]}`}
                 >
-                  {item.linkViewDemo}
-                </p>
-                <p
+                  View Live Demo
+                </a>
+                <a
+                  href={item.linkGithub}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`${ProjectCss["text-sm"]} ${ProjectCss["portfolio--link"]}`}
                 >
-                  {item.linkGithub}
-                </p>
+                  Source Code
+                </a>
               </div>
             </div>
           </div>
