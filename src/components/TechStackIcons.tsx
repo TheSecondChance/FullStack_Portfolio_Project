@@ -1,4 +1,5 @@
 import StackIcon from "tech-stack-icons";
+import { motion } from "framer-motion";
 
 type IconsProps = {
   iconLanguage: string;
@@ -17,10 +18,15 @@ const TechStackIcons = ({
 }: IconsProps) => {
   return (
     <div>
-      <div className={wrapper}>
+      <motion.div
+        whileHover={{ scale: 1, background: "#fff" }}
+        initial={{ scale: 0.9 }}
+        transition={{ type: "spring" }}
+        className={wrapper}
+      >
         <StackIcon name={name} style={{ width: 30 }} className={icon} />
         <p className={tooltipText}>{iconLanguage}</p>
-      </div>
+      </motion.div>
     </div>
   );
 };
