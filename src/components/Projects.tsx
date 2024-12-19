@@ -34,7 +34,7 @@ const Projects = () => {
                 <h3 className={ProjectCss["portfolio--section--title"]}>
                   {item.title}
                 </h3>
-                <p className="text-md">{item.description}</p>
+                <p className={ProjectCss["text-md"]}>{item.description}</p>
               </div>
               <div className={ProjectCss["links"]}>
                 <a

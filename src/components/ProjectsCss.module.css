@@ -51,6 +51,15 @@
 
 .portfolio--section--title {
   color: var(--heading-color);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.text-md {
+  color: rgb(79, 79, 79);
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
 }
 .portfolio--link {
   text-decoration: none;
