@@ -19,8 +19,9 @@ const TechStackIcons = ({
   return (
     <div>
       <motion.div
-        whileHover={{ scale: 1, background: "#fff" }}
-        initial={{ scale: 0.9 }}
+        whileHover={{ x: 2, background: "#fff" }}
+        initial={{ x: 5, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
         transition={{ type: "spring" }}
         className={wrapper}
       >
