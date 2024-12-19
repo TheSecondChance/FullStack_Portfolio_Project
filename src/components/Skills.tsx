@@ -1,17 +1,29 @@
 import data from "../data/index.json";
 import SkillsCss from "./SkillsCss.module.css";
 import TechStackIcons from "./TechStackIcons";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
     <section className={SkillsCss["skills--section"]} id="MySkills">
-      <div className={SkillsCss["portfolio--container"]}>
+      <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.5 }}
+        className={SkillsCss["portfolio--container"]}
+      >
         <p className={SkillsCss["section--title"]}>Technical Expertise</p>
         <h2 className={SkillsCss["skills--section--heading"]}>My Skills</h2>
-      </div>
+      </motion.div>
       <div className={SkillsCss["skills--section--container"]}>
         {data?.skills?.map((item, index) => (
-          <div key={index} className={SkillsCss["skills--section--card"]}>
+          <motion.div
+            whileInView={{ scale: 1 }}
+            initial={{ scale: 0.8 }}
+            transition={{ type: "spring" }}
+            key={index}
+            className={SkillsCss["skills--section--card"]}
+          >
             <div className={SkillsCss["skills--section--card--content"]}>
               <h3 className={SkillsCss["skills--section--title"]}>
                 {item.title}
@@ -32,7 +44,7 @@ const Skills = () => {
                 />
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
