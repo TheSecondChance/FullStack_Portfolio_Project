@@ -4,25 +4,58 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import HeroSectionCss from "./HeroSectionCss.module.css";
 import logo from "../assets/img/hero_img.jpg";
 import resume from "../assets/Eyasu Sintayehu Resume.pdf";
+import { motion } from "framer-motion";
+
+const motionVariants = (delay: number) => ({
+  hidden: { x: 100, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.5, delay: delay },
+  },
+});
 
 const Hero = () => {
   return (
     <section id="heroSection" className={HeroSectionCss["hero--section"]}>
       <div className={HeroSectionCss["hero--section--img"]}>
-        <img src={logo} alt="engineer image" />
+        <motion.img
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.7 }}
+          src={logo}
+          alt="engineer image"
+        />
       </div>
 
       <div className={HeroSectionCss["hero--section--content--box"]}>
         <div className={HeroSectionCss["hero--section--content"]}>
-          <p className={HeroSectionCss["section--title"]}>Hey, I'm Eyasu</p>
-          <h1 className={HeroSectionCss["hero--section--title"]}>
+          <motion.p
+            variants={motionVariants(0.1)}
+            initial="hidden"
+            animate="visible"
+            className={HeroSectionCss["section--title"]}
+          >
+            Hey, I'm Eyasu
+          </motion.p>
+          <motion.h1
+            variants={motionVariants(0.3)}
+            initial="hidden"
+            animate="visible"
+            className={HeroSectionCss["hero--section--title"]}
+          >
             <span className={HeroSectionCss["hero--section-title--color"]}>
               Full Stack
             </span>
             <br />
             Software Engineer
-          </h1>
-          <p className={HeroSectionCss["hero--section-description"]}>
+          </motion.h1>
+          <motion.p
+            variants={motionVariants(0.5)}
+            initial="hidden"
+            animate="visible"
+            className={HeroSectionCss["hero--section-description"]}
+          >
             <FaMapMarkerAlt
               color="#EA1B00"
               size={18}
@@ -31,9 +64,14 @@ const Hero = () => {
             Addis Ababa, Ethiopia
             <br /> I like to develop full-stack web applications, write backend
             logics & love to explore to make my hands dirty on the technologies!
-          </p>
+          </motion.p>
         </div>
-        <div className={HeroSectionCss["links"]}>
+        <motion.div
+          variants={motionVariants(1)}
+          initial="hidden"
+          animate="visible"
+          className={HeroSectionCss["links"]}
+        >
           <a
             className={`${HeroSectionCss["btn-primary"]} ${HeroSectionCss["btn"]}`}
             href={resume}
@@ -63,7 +101,7 @@ const Hero = () => {
           >
             <FaSquareXTwitter size={30} />
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
