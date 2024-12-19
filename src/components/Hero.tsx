@@ -3,6 +3,7 @@ import { FiLinkedin } from "react-icons/fi";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import HeroSectionCss from "./HeroSectionCss.module.css";
 import logo from "../assets/img/hero_img.jpg";
+import resume from "../assets/Eyasu Sintayehu Resume.pdf";
 
 const Hero = () => {
   return (
@@ -35,7 +36,7 @@ const Hero = () => {
         <div className={HeroSectionCss["links"]}>
           <a
             className={`${HeroSectionCss["btn-primary"]} ${HeroSectionCss["btn"]}`}
-            href="https://docs.google.com/document/d/1i5jSoI27WrAp-CAAYMpVBwaAL9E7dks9pAJQS3CFi2Y/edit?usp=sharing"
+            href={resume}
             target="_blank"
             rel="noopener noreferrer"
           >
