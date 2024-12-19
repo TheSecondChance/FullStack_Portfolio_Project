@@ -1,17 +1,31 @@
 import data from "../data/index.json";
 import ProjectCss from "./ProjectsCss.module.css";
 import { getImageURL } from "../utils/image-utils";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
     <section className={ProjectCss["portfolio--section"]} id="MyProjects">
       <div className={ProjectCss["portfolio--container-box"]}>
-        <h2 className={ProjectCss["section--heading"]}>Projects</h2>
+        <motion.h2
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 0.5 }}
+          className={ProjectCss["section--heading"]}
+        >
+          Projects
+        </motion.h2>
       </div>
 
       <div className={ProjectCss["portfolio--section--container"]}>
         {data?.project?.map((item, index) => (
-          <div key={index} className={ProjectCss["portfolio--section--card"]}>
+          <motion.div
+            whileInView={{ scale: 1 }}
+            initial={{ scale: 0.8 }}
+            transition={{ type: "spring" }}
+            key={index}
+            className={ProjectCss["portfolio--section--card"]}
+          >
             <div className={ProjectCss["portfolio--section--img"]}>
               <img src={getImageURL(item.src)} alt="project-image" />
             </div>
@@ -41,7 +55,7 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
