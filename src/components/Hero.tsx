@@ -3,7 +3,7 @@ import { FiLinkedin } from "react-icons/fi";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import HeroSectionCss from "./HeroSectionCss.module.css";
 import logo from "../assets/img/hero_img.jpg";
-import resume from "../assets/Eyasu Sintayehu Resume.pdf";
+import resume from "../assets/Eyasu_Sintayehu_Resume.pdf";
 import { motion } from "framer-motion";
 
 const motionVariants = (delay: number) => ({
