@@ -1,0 +1,80 @@
+{
+  "skills": [
+    {
+      "id": "1",
+      "title": "Front-End",
+      "description": "I'm passionate about design, animation, and interactions, always aiming to build fun websites with great user experiences",
+      "icons": {
+        "reactjs": "React",
+        "js": "JavaScript",
+        "typescript": "TypeScript",
+        "redux": "Redux",
+        "tailwindcss": "Tailwind CSS",
+        "css3": "CSS3"
+      }
+    },
+
+    {
+      "id": "2",
+      "title": "Back-End",
+      "description": "I love problem-solving and building complex systems. I strive to create scalable, reliable, and secure solutions",
+      "icons": {
+        "django": "Django",
+        "python": "python",
+        "mysql": "MySQL",
+        "git": "Git",
+        "github": "GitHub",
+        "postgresql": "PostgreSQL"
+      }
+    },
+    {
+      "id": "3",
+      "title": "Cloud & DevOps",
+      "description": "I have managed AWS, GCP, and various other cloud services for multiple start-ups and my own projects",
+      "icons": {
+        "aws": "AWS",
+        "ec2": "EC2",
+        "linux": "Linux",
+        "docker": "Docker",
+        "redis": "Redis",
+        "digitalocean": "Digital Ocean",
+        "gcloud": "GCP"
+      }
+    },
+    {
+      "id": "4",
+      "title": "Management",
+      "description": "I have worked with multiple clients and stakeholders to define projects that suit their needs and managed these projects from start to finished",
+      "icons": {
+        "jira": "Jira",
+        "slack": "Slack"
+      }
+    }
+  ],
+  "project": [
+    {
+      "id": "1",
+      "src": "driver.png",
+      "title": "Driver's License Registration System",
+      "description": "A comprehensive platform for managing User registration for a driver's license. Track the application process in real-time. ",
+      "linkViewDemo": "https://bot.get-alpha.tech/",
+      "linkGithub": "https://github.com/TheSecondChance/Multi_solution_admin_dashboard"
+    },
+    {
+      "id": "2",
+      "src": "giveaway_bot.png",
+      "title": "Giveaway Telegram Bot",
+      "description": "Automated Telegram bot to Manage giveaways. Include customizable giveaway creation, participant tracking, random winner selection, and admin controls.",
+      "linkViewDemo": "View Live Demo",
+      "linkGithub": "https://github.com/TheSecondChance/Giveaway_Telegram_Bot"
+    },
+    {
+      "id": "3",
+      "src": "chrome.png",
+      "title": "Hassle-free Reminder",
+      "description": "A Chrome Extension that delivers programming questions at customizable time intervals to help developers stay sharp and improve their coding skills. ",
+      "linkViewDemo": "View Live Demo",
+      "linkGithub": "https://github.com/TheSecondChance/Browser-Extension"
+    }
+  ]
+}
