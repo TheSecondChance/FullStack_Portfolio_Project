@@ -1,7 +1,7 @@
 import data from "../data/index.json";
 import ProjectCss from "./ProjectsCss.module.css";
 import { getImageURL } from "../utils/image-utils";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const Projects = () => {
   return (
@@ -22,7 +22,7 @@ const Projects = () => {
           <motion.div
             whileInView={{ scale: 1 }}
             initial={{ scale: 0.8 }}
-            transition={{ type: "spring" }}
+            transition={{ type: "spring", bounce: 0, duration: 0 }}
             key={index}
             className={ProjectCss["portfolio--section--card"]}
           >
