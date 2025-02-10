@@ -9,7 +9,7 @@ const Skills = () => {
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
+        transition={{ type: "spring", bounce: 0.3, duration: 1.2 }}
         className={SkillsCss["portfolio--container"]}
       >
         <p className={SkillsCss["section--title"]}>Technical Expertise</p>
@@ -20,7 +20,7 @@ const Skills = () => {
           <motion.div
             whileInView={{ scale: 1 }}
             initial={{ scale: 0.8 }}
-            transition={{ type: "spring" }}
+            transition={{ type: "spring", bounce: 0, duration: 0 }}
             key={index}
             className={SkillsCss["skills--section--card"]}
           >
